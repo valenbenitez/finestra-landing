@@ -21,15 +21,19 @@ export function Packages() {
           </p>
         </FadeIn>
 
-        <div className="flex gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-3 sm:overflow-visible lg:grid-cols-5 [&::-webkit-scrollbar]:hidden">
+        <div className="flex items-stretch gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-3 sm:overflow-visible lg:grid-cols-5 [&::-webkit-scrollbar]:hidden">
           {packageTypes.map((item, index) => (
-            <FadeIn key={item.id} delay={index * 0.05} className="min-w-[78%] sm:min-w-0">
+            <FadeIn
+              key={item.id}
+              delay={index * 0.05}
+              className="flex h-auto min-h-full min-w-[78%] sm:min-w-0"
+            >
               <motion.a
                 href="#contacto"
                 whileHover={reduce ? undefined : { y: -4 }}
-                className="block overflow-hidden rounded-[22px] bg-mist ring-1 ring-black/5"
+                className="flex h-full w-full flex-col overflow-hidden rounded-[22px] bg-mist ring-1 ring-black/5"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[4/3] shrink-0 overflow-hidden">
                   <img
                     src={item.image}
                     alt=""
@@ -37,9 +41,9 @@ export function Packages() {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-4">
+                <div className="flex flex-1 flex-col p-4">
                   <h3 className="text-base font-bold text-ink">{item.name}</h3>
-                  <p className="mt-1.5 text-sm leading-snug text-ink-soft">
+                  <p className="mt-1.5 flex-1 text-sm leading-snug text-ink-soft">
                     {item.blurb}
                   </p>
                 </div>

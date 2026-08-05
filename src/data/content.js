@@ -122,8 +122,7 @@ export const reviews = [
   },
 ]
 
-export const heroVideo =
-  'https://videos.pexels.com/video-files/7601002/7601002-hd_1920_1080_30fps.mp4'
-
-export const heroPoster =
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80'
+// Local assets from Pexels #8538619 (boy exploring a world map)
+// Poster is a frame from the same clip so the fallback matches the video.
+export const heroVideo = '/hero.mp4'
+export const heroPoster = '/hero-poster.jpg'

@@ -29,10 +29,17 @@ export function Hero() {
         className="absolute inset-0"
         style={
           reduce
-            ? undefined
+            ? {
+                backgroundImage: `url(${heroPoster})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }
             : {
                 y: mediaY,
                 scale: mediaScale,
+                backgroundImage: `url(${heroPoster})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
               }
         }
       >
