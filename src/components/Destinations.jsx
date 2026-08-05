@@ -25,11 +25,11 @@ function DestinationCard({ item }) {
 
   return (
     <motion.article
-      initial={reduce ? false : { opacity: 0, y: 48, scale: 0.96 }}
+      initial={reduce ? false : { opacity: 0, y: 36, scale: 0.97 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: false, amount: 0.45, margin: '0px 0px -8% 0px' }}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      className="grid h-full overflow-hidden rounded-[22px] bg-white shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-md lg:h-[280px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]"
+      viewport={{ once: false, amount: 0.35, margin: '0px 0px -12% 0px' }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className="grid h-full overflow-hidden rounded-[22px] bg-white shadow-sm ring-1 ring-black/5 transition hover:-translate-y-0.5 hover:shadow-md lg:h-[260px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]"
     >
       <div className="aspect-[16/10] overflow-hidden lg:aspect-auto lg:h-full">
         <img
@@ -84,11 +84,9 @@ export function Destinations() {
           </p>
         </FadeIn>
 
-        <div className="grid gap-5 lg:gap-6">
+        <div className="grid gap-5 lg:gap-5">
           {destinations.map((item) => (
-            <div key={item.id} className="lg:min-h-[240px]">
-              <DestinationCard item={item} />
-            </div>
+            <DestinationCard key={item.id} item={item} />
           ))}
         </div>
       </div>

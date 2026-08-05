@@ -21,12 +21,12 @@ export function Packages() {
           </p>
         </FadeIn>
 
-        <div className="flex items-stretch gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-3 sm:overflow-visible lg:grid-cols-5 [&::-webkit-scrollbar]:hidden">
+        <div className="grid auto-cols-[minmax(78%,1fr)] grid-flow-col items-stretch gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] sm:auto-cols-auto sm:grid-flow-row sm:grid-cols-3 sm:overflow-visible lg:grid-cols-5 [&::-webkit-scrollbar]:hidden">
           {packageTypes.map((item, index) => (
             <FadeIn
               key={item.id}
               delay={index * 0.05}
-              className="flex h-auto min-h-full min-w-[78%] sm:min-w-0"
+              className="h-full min-w-0"
             >
               <motion.a
                 href="#contacto"
@@ -43,7 +43,7 @@ export function Packages() {
                 </div>
                 <div className="flex flex-1 flex-col p-4">
                   <h3 className="text-base font-bold text-ink">{item.name}</h3>
-                  <p className="mt-1.5 flex-1 text-sm leading-snug text-ink-soft">
+                  <p className="mt-1.5 line-clamp-3 flex-1 text-sm leading-snug text-ink-soft">
                     {item.blurb}
                   </p>
                 </div>
