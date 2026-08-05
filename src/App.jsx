@@ -2,7 +2,7 @@ import { Disclaimer } from './components/Disclaimer'
 import { Hero } from './components/Hero'
 import { Packages } from './components/Packages'
 import { Destinations } from './components/Destinations'
-import { WhyFinestra } from './components/WhyFinestra'
+import { GroupTravel } from './components/GroupTravel'
 import { Reviews } from './components/Reviews'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -14,7 +14,7 @@ export default function App() {
       <Hero />
       <Packages />
       <Destinations />
-      <WhyFinestra />
+      <GroupTravel />
       <Reviews />
       <Contact />
       <Footer />

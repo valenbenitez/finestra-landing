@@ -1,10 +1,10 @@
 export const navLinks = [
-  { label: 'Grupales', href: '#paquetes' },
+  { label: 'Grupales', href: '#grupos' },
   { label: 'Escapadas', href: '#paquetes' },
   { label: 'Paquetes', href: '#paquetes' },
   { label: 'Cruceros', href: '#paquetes' },
   { label: 'Viajes personalizados', href: '#paquetes' },
-  { label: 'Sobre nosotros', href: '#por-que' },
+  { label: 'Sobre nosotros', href: '#contacto' },
 ]
 
 export const packageTypes = [
@@ -81,20 +81,20 @@ export const destinations = [
   },
 ]
 
-export const reasons = [
-  {
-    title: 'Planificación simple',
-    text: 'Te ordenamos opciones claras para que decidas sin saturarte.',
-  },
-  {
-    title: 'Destinos elegidos',
-    text: 'Curamos propuestas que funcionan: playa, ciudad y escapes reales.',
-  },
-  {
-    title: 'Acompañamiento cercano',
-    text: 'Estamos del otro lado cuando aparece una duda o un cambio de plan.',
-  },
-]
+export const groupTrip = {
+  eyebrow: '¿Viajás en grupo?',
+  lead: 'Dejá que armemos la experiencia perfecta, hecha a la medida de tu gente.',
+  title: 'Excursiones grupales adaptadas a tus intereses',
+  description:
+    'Familias, amigos o equipos de trabajo: organizamos salidas y viajes con itinerario flexible, traslados y propuestas pensadas para que todos la pasen bien.',
+  perks: [
+    'Cotización especial para grupos',
+    'Itinerario a medida de tus intereses',
+  ],
+  cta: 'Solicitá una cotización',
+  image:
+    'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80',
+}
 
 export const reviews = [
   {
