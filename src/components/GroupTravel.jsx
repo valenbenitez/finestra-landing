@@ -6,13 +6,13 @@ export function GroupTravel() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="grupos" className="bg-white px-5 py-16 sm:px-8 sm:py-20">
+    <section id="grupos" className="bg-white px-5 py-14 sm:px-8 sm:py-16">
       <div className="mx-auto max-w-5xl">
-        <FadeIn className="mb-6 sm:mb-8">
+        <FadeIn className="mb-5 sm:mb-6">
           <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
             {groupTrip.eyebrow}
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
             {groupTrip.lead}
           </p>
         </FadeIn>
@@ -21,9 +21,9 @@ export function GroupTravel() {
           <motion.article
             whileHover={reduce ? undefined : { y: -3 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden rounded-[22px] bg-white shadow-md ring-1 ring-black/5 lg:grid lg:h-[280px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]"
+            className="overflow-hidden rounded-[22px] bg-white shadow-md ring-1 ring-black/5 lg:grid lg:h-[240px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]"
           >
-            <div className="aspect-[16/10] overflow-hidden sm:aspect-[2/1] lg:aspect-auto lg:h-full">
+            <div className="aspect-[16/10] overflow-hidden sm:aspect-[21/9] lg:aspect-auto lg:h-full">
               <img
                 src={groupTrip.image}
                 alt="Grupo de viajeros"
@@ -31,14 +31,14 @@ export function GroupTravel() {
                 loading="lazy"
               />
             </div>
-            <div className="flex flex-col p-5 sm:p-6 lg:overflow-hidden lg:p-6">
+            <div className="flex flex-col p-5 sm:p-6 lg:overflow-hidden lg:py-5 lg:pr-6 lg:pl-5">
               <h3 className="text-lg font-bold tracking-tight text-ink sm:text-xl">
                 {groupTrip.title}
               </h3>
-              <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-ink-soft">
+              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft lg:line-clamp-3">
                 {groupTrip.description}
               </p>
-              <ul className="mt-4 space-y-2">
+              <ul className="mt-3 space-y-2">
                 {groupTrip.perks.map((perk, index) => (
                   <li
                     key={perk}
@@ -51,10 +51,10 @@ export function GroupTravel() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto flex justify-end pt-5">
+              <div className="mt-auto flex justify-end pt-4">
                 <a
                   href="#contacto"
-                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition hover:bg-ink/90 active:scale-[0.98]"
+                  className="inline-flex min-h-10 items-center justify-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition hover:bg-ink/90 active:scale-[0.98]"
                 >
                   {groupTrip.cta}
                 </a>
