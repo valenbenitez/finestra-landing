@@ -7,7 +7,7 @@ export function GroupTravel() {
 
   return (
     <section id="grupos" className="bg-white px-5 py-14 sm:px-8 sm:py-16">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <FadeIn className="mb-5 sm:mb-6">
           <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
             {groupTrip.eyebrow}
@@ -21,17 +21,17 @@ export function GroupTravel() {
           <motion.article
             whileHover={reduce ? undefined : { y: -3 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden rounded-[22px] bg-white shadow-md ring-1 ring-black/5 lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-stretch"
+            className="grid overflow-hidden rounded-[22px] bg-white shadow-md ring-1 ring-black/5 lg:grid-cols-2"
           >
-            <div className="aspect-[16/10] overflow-hidden sm:aspect-[21/9] lg:aspect-auto lg:min-h-full">
+            <div className="relative min-h-[200px] overflow-hidden sm:min-h-[220px] lg:min-h-0">
               <img
                 src={groupTrip.image}
                 alt="Grupo de viajeros"
-                className="h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
               />
             </div>
-            <div className="flex flex-col gap-3 p-5 sm:p-6 lg:justify-center lg:p-7">
+            <div className="flex flex-col gap-3 p-5 sm:gap-3.5 sm:p-6 lg:p-8">
               <h3 className="text-lg font-bold tracking-tight text-ink sm:text-xl">
                 {groupTrip.title}
               </h3>
