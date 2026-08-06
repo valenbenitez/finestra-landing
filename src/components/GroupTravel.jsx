@@ -21,9 +21,9 @@ export function GroupTravel() {
           <motion.article
             whileHover={reduce ? undefined : { y: -3 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden rounded-[22px] bg-white shadow-md ring-1 ring-black/5 lg:grid lg:h-[240px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]"
+            className="overflow-hidden rounded-[22px] bg-white shadow-md ring-1 ring-black/5 lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-stretch"
           >
-            <div className="aspect-[16/10] overflow-hidden sm:aspect-[21/9] lg:aspect-auto lg:h-full">
+            <div className="aspect-[16/10] overflow-hidden sm:aspect-[21/9] lg:aspect-auto lg:min-h-full">
               <img
                 src={groupTrip.image}
                 alt="Grupo de viajeros"
@@ -31,14 +31,14 @@ export function GroupTravel() {
                 loading="lazy"
               />
             </div>
-            <div className="flex flex-col p-5 sm:p-6 lg:overflow-hidden lg:py-5 lg:pr-6 lg:pl-5">
+            <div className="flex flex-col gap-3 p-5 sm:p-6 lg:justify-center lg:p-7">
               <h3 className="text-lg font-bold tracking-tight text-ink sm:text-xl">
                 {groupTrip.title}
               </h3>
-              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft lg:line-clamp-3">
+              <p className="text-sm leading-relaxed text-ink-soft">
                 {groupTrip.description}
               </p>
-              <ul className="mt-3 space-y-2">
+              <ul className="space-y-2">
                 {groupTrip.perks.map((perk, index) => (
                   <li
                     key={perk}
@@ -51,7 +51,7 @@ export function GroupTravel() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto flex justify-end pt-4">
+              <div className="flex justify-end pt-1">
                 <a
                   href="#contacto"
                   className="inline-flex min-h-10 items-center justify-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition hover:bg-ink/90 active:scale-[0.98]"
